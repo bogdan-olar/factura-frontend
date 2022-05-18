@@ -1,9 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Water+Brush&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #094562;
+  background-color: white;
 }
 
 a {
@@ -13,4 +18,624 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/************************************************************
+log page styling
+*************************************************************/
+
+.log-form-container {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  width: 600px;
+  margin: auto;
+  margin-top: 100px;
+}
+.log-input {
+  width: 400px;
+  margin: auto;
+  margin-top: 30px;
+}
+.btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+.log-btn {
+   border: 1px solid #094562;
+   border-radius: 4px;
+   margin: 15px;
+   margin-right: 120px;
+   background: white;
+   color: #094562;
+   padding: 7px 20px;
+   transition: background 0.6s, color 0.6s;
+}
+.log-btn:hover {
+  background: #094562;
+  color: white;
+}
+.cont-nou-text {
+  margin: 20px;
+  margin-right: 95px;
+  text-align: end;
+}
+.cont-nou-text-span {
+    text-decoration: underline;
+    text-decoration-style: dotted; 
+    padding-left: 10px;
+    transition: color 0.6s;
+    cursor: pointer;
+}
+.cont-nou-text-span:hover {
+  color: #78b75d;
+}
+.error-log {
+  color: tomato;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 300px;
+}
+
+/************************************************************
+home page styling
+*************************************************************/
+
+.home-page-element {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  border: 1px dotted lightblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+.home-page-number {
+  font-size: 30px;
+  width: 7%;
+  border-right: 1px dotted lightblue;
+}
+.home-page-butoane {
+  border-top: 1px dotted lightblue;
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.factura-tot {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  padding-left: 20px;
+}
+.factura-text {
+  display: flex;
+  /* border: 1px solid black; */
+}
+.factura {
+  border-right: 1px dotted lightblue;
+  padding-right: 40px;
+}
+.factura-date-client {
+  padding-left: 30px;
+}
+
+.total-factura-container {
+  display: flex;
+  justify-content: space-between;
+}
+.semnatura-factura {
+  border: 1px dotted lightgray;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding: 10px 30px;
+  width: 20%;
+
+}
+.delegat-factura {
+  border: 1px dotted lightgray;
+  border-radius: 6px;
+  padding: 10px 30px;
+  width: 35%;
+}
+.total-factura {
+  border: 1px dotted lightgray;
+  border-radius: 6px;
+  margin: 20px;
+  padding: 10px 30px;
+  width: 35%;
+}
+.total-factura-head {
+  width: 35%;
+  font-size: 18px;
+}
+/************************************************************
+client page styling
+*************************************************************/
+
+.clienti-bloc-container {
+  /* border: 1px solid black; */
+  max-width: 1000px;
+  margin: auto;
+}
+
+.clienti-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.client-element {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+  margin: 20px;
+  border: 1px dotted lightblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+.client-number {
+  font-size: 30px;
+  width: 10%;
+  border-right: 1px dotted lightblue;
+}
+.client-date {
+  width: 85%;
+  padding-left: 30px;
+}
+.client-butoane {
+  border-top: 1px dotted lightblue;
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.butoane {
+  margin-right: 10px;
+}
+
+.forma-client-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  /* border: 1px solid black; */
+}
+
+/************************************************************
+layout page styling
+*************************************************************/
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.logo-element {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 10px;
+}
+.logo-text {
+  font-family: 'Water Brush', cursive;
+  font-size: 40px;
+  font-style: italic;
+  padding-left: 18px;
+}
+.nav-element {
+  width: 280px;
+  min-height:100vh;
+  background-color: rgba(240, 248, 255, 0.856);
+  color: #094562;
+  border-right: 1px solid gainsboro;
+}
+.nav-link-element {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  padding-left: 34px;
+  /* border: 1px solid black; */
+}
+.nav-link-text {
+  /* border: 1px solid black; */
+  font-size: 18px;
+  padding-left: 10px;
+}
+.nav-link-element:hover .nav-link-text {
+  color: #5b8b46;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.nav-link-element:hover {
+  color: #5b8b46;
+}
+.body-element {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.bara-element {
+  width: 100%;
+  margin: auto;
+}
+.main-element {
+  width: 95%;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 98vh;
+  /* border: 1px solid black; */
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+.factura-header{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bara {
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  border-bottom: 1px solid gainsboro;
+  height: 60px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+}
+.log-element {
+  margin-top: 10px;
+}
+.log-element:hover {
+  cursor: pointer;
+  color: #5b8b46;
+}
+.log-text {
+  font-family: 'Water Brush', cursive;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.bloc-container {
+  /* border: 1px solid black; */
+  max-width: 900px;
+  margin: auto;
+}
+
+.tabel-container {
+  /* border: 1px solid black; */
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+
+
+
+/************************************************************
+navigation styling
+*************************************************************/
+
+/************************************************************
+emite factura styling
+*************************************************************/
+
+.logo-societate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+.logo-societate-text {
+  font-family: 'Water Brush', cursive;
+  font-size: 40px;
+  font-style: italic;
+}
+
+.emitent-container {
+  /* border: 1px solid lightgray; */
+  border-radius: 6px;
+  width: 380px;
+  margin: auto;
+  padding: 20px;
+}
+.client-container {
+  /* border: 1px solid lightgray; */
+  border-radius: 6px;
+  width: 380px;
+  margin: auto;
+  padding: 20px;
+}
+.form-element-client {
+  display: flex;
+  flex-direction: column;
+}
+.select-client-label {
+    font-weight: 700;
+}
+.select-client {
+      padding: 12px;
+      padding-left: 20px;
+      border: 1px solid rgb(230, 227, 227);
+      width: 280px;
+      /* border-radius: 7px; */
+      color: #04567f;
+      font-size: 14px;
+}
+.numar-factura-block {
+  width: 400px;
+  margin: auto;
+  margin-bottom: 40px;
+  border-bottom: 1px dotted grey;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.forma-element-emite-factura {
+  /* border: 1px solid black; */
+  width: 20%;
+  min-width: 130px;
+  margin: 10px;
+}
+.forma-label-emite-factura {
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.emite-factura-field {
+  border: 1px solid lightgray;
+  min-width: 130px;
+  border-radius: 6px;
+  padding: 5px 20px;
+  width: 90%;
+  text-align: center;
+}
+.emite-factura-field:focus {
+  border: 1px solid lightblue;
+  outline: none;
+  box-shadow: 1px 1px 1px lightblue;
+}
+
+.field-element-select {
+    -webkit-appearance:none;
+    background: url(../public/k.png) no-repeat right;
+    background-size: 18px 18px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    min-width: 70px;
+}
+.field-element-select:focus {
+  border: 1px solid lightblue;
+  outline: none;
+  box-shadow: 1px 1px 1px lightblue;
+}
+
+
+.emitent-field-complex {
+  border: none;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  min-width: 350px;
+  padding: 10px;
+  font-size: 14px;
+}
+.emitent-field-complex:focus {
+  outline: none;
+}
+
+.sc {
+  border: 1px solid lightgray;
+  border-radius: 6px 0px 0px 6px;
+  padding: 10px;
+  background: rgba(211, 211, 211, 0.523);
+  font-size: 14px;
+}
+
+.field-element-select-complex {
+    -webkit-appearance:none;
+    background: url(../public/k.png) no-repeat right;
+    background-color: rgba(211, 211, 211, 0.523);
+    background-size: 18px 18px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 0px 6px 6px 0px;
+    min-width: 90px;
+    font-size: 14px;
+}
+.field-element-select-complex:focus {
+  outline: none;
+}
+
+/************************************************************
+forma delegat styling
+*************************************************************/
+
+.forma-delegat-container {
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+  /* border: 1px solid black; */
+}
+.title-form-delegat {
+  /* border: 1px solid black; */
+  width: 90%;
+  min-width: 130px;
+  margin: 10px;
+}
+
+.group-delegat-form {
+  display: flex;
+}
+
+.forma-element-delegat {
+  /* border: 1px solid black; */
+  width: 300px;
+  min-width: 130px;
+  margin: 10px;
+}
+.forma-label-delegat {
+  padding-left: 20px;
+  font-weight: 600;
+  color: hsl(200, 94%, 26%);
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.delegat-field {
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 90%;
+  font-size: 14px;
+}
+.delegat-field:focus {
+  border: 1px solid lightblue;
+  outline: none;
+  box-shadow: 1px 1px 1px lightblue;
+}
+
+/************************************************************
+form styling
+*************************************************************/
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.form-element-dublu {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+  margin: auto;
+}
+.form-element-trei {
+  display: flex;
+  flex-direction: row;
+}
+
+.forma-label {
+  width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.label-element {
+      width: 300px;
+      margin: auto;
+      color: #04567f;
+      font-size: 15px;
+      padding-left: 5px;
+}
+.input-element {
+      padding: 12px;
+      padding-left: 20px;
+      border: 1px solid rgb(230, 227, 227);
+      /* border-radius: 7px; */
+      width: 300px;
+      margin: auto;
+      color: #04567f;
+      font-size: 14px;
+}
+.input-element:focus {
+  outline: none;
+  border: 1px solid lightblue;
+  box-shadow: 2px 2px 2px lightblue;
+}
+
+.form-element-button {
+  margin: 20px;
+}
+
+.form-group {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+.error {
+  color: tomato;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 95%;
+  margin: auto;
+}
+
+.button-container {
+    /* border: 1px solid black; */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.buton {
+  margin: 10px;
+}
+.adauga-delegat {
+  border-top: 1px dotted black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.platitor-tva {
+  /* border: 1px solid black; */
+  display: flex;
+  min-width: 150px;
+  padding-top: 20px;
+}
+.platitor-tva-label {
+  min-width: 120px;
+  padding-top: 12px;
+  /* border: 1px solid black; */
+  font-weight: 600;
+  color: #04567f;
+  font-size: 15px;
+}
+.platitor-tva-field {
+    /* border: 1px solid black; */
+    padding: 10px;
+    padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  margin: auto;
+}
+th {
+  border-bottom: 1px dotted #094562;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background: rgba(240, 248, 255, 0.856);
+}
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+.forma-delegat {
+  display: none;
 }
