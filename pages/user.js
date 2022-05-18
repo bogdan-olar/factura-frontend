@@ -13,7 +13,7 @@ function User( props ) {
     const [ count, setCount ] = useState(0)
 
     useEffect( () => {
-        fetch('http://bogdanolar.pythonanywhere.com/delegat').then( res => res.json() ).then( res => setDelegati(res) ).catch( err => console.log(err) )
+        fetch('https://bogdanolar.pythonanywhere.com/delegat').then( res => res.json() ).then( res => setDelegati(res) ).catch( err => console.log(err) )
     }, [count])
 
     function ascundeAdaugaForma() {
@@ -27,7 +27,7 @@ function User( props ) {
     }
 
     function stergere(id) {
-        fetch('http://bogdanolar.pythonanywhere.com/delegat/sterge', {
+        fetch('https://bogdanolar.pythonanywhere.com/delegat/sterge', {
             method: 'DELETE',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({ i: id})
@@ -104,7 +104,7 @@ export default User
 
 export async function getServerSideProps() {
 
-    const response = await fetch('http://bogdanolar.pythonanywhere.com/delegat')
+    const response = await fetch('https://bogdanolar.pythonanywhere.com/delegat')
     const data = await response.json()
 
     return {

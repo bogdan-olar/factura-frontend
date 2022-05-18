@@ -37,14 +37,14 @@ function ClientForm(props) {
         router.push('/clients')
 
         if( data === null ){
-            return fetch('http://bogdanolar.pythonanywhere.com/client/add', {
+            return fetch('https://bogdanolar.pythonanywhere.com/client/add', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json'},
                 body: JSON.stringify(values)
             }).then( res => res.json() ).then( res => console.log(res) ).catch( err => console.log(err))
         }
 
-        return fetch('http://bogdanolar.pythonanywhere.com/update', {
+        return fetch('https://bogdanolar.pythonanywhere.com/update', {
                 method: 'PUT',
                 headers: { 'Content-type': 'application/json'},
                 body: JSON.stringify({...values, 'id': data[0]})
@@ -196,7 +196,7 @@ export async function getServerSideProps( context ) {
     const { params } = context
     const { client } = params
 
-    const response = await fetch(`http://bogdanolar.pythonanywhere.com/clients?nume=${client}`)
+    const response = await fetch(`https://bogdanolar.pythonanywhere.com/clients?nume=${client}`)
     const data = await response.json()
 
     return {

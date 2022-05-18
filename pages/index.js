@@ -49,7 +49,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://bogdanolar.pythonanywhere.com/factura')
+  const res = await fetch('https://bogdanolar.pythonanywhere.com/factura')
   const data = await res.json()
 
   return {

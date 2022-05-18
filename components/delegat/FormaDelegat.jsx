@@ -40,7 +40,7 @@ function FormaDelegat(props) {
     const submit = (values) => {
 
         if( 'delegat' in props ) {
-            return fetch('http://bogdanolar.pythonanywhere.com/delegat/update', {
+            return fetch('https://bogdanolar.pythonanywhere.com/delegat/update', {
                 method: 'PUT',
                 headers: { 'Content-type': 'application/json'},
                 body: JSON.stringify({...values, 'id': props.delegat[0][0]})
@@ -48,7 +48,7 @@ function FormaDelegat(props) {
             .catch( err => console.log(err))
         }
 
-        return fetch('http://bogdanolar.pythonanywhere.com/delegat/add', {
+        return fetch('https://bogdanolar.pythonanywhere.com/delegat/add', {
            method: 'POST',
            headers: { 'Content-type': 'application/json' },
            body: JSON.stringify(values)

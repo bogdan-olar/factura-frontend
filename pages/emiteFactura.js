@@ -29,7 +29,7 @@ function EmiteFactura(props) {
 
         router.push('/')
 
-        return fetch('http://bogdanolar.pythonanywhere.com/factura/add', {
+        return fetch('https://bogdanolar.pythonanywhere.com/factura/add', {
             method: 'POST',
             headers: { 'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -256,16 +256,16 @@ export default EmiteFactura
 
 export async function getServerSideProps() {
 
-    const responsEmitent = await fetch('http://bogdanolar.pythonanywhere.com/emitent')
+    const responsEmitent = await fetch('https://bogdanolar.pythonanywhere.com/emitent')
     const dateEmitent = await responsEmitent.json()
 
-    const respons = await fetch('http://bogdanolar.pythonanywhere.com/factura')
+    const respons = await fetch('https://bogdanolar.pythonanywhere.com/factura')
     const data = await respons.json()
 
-    const responsClient = await fetch('http://bogdanolar.pythonanywhere.com/clients')
+    const responsClient = await fetch('https://bogdanolar.pythonanywhere.com/clients')
     const dataClient = await responsClient.json()
 
-    const responsDelegat = await fetch('http://bogdanolar.pythonanywhere.com/delegat')
+    const responsDelegat = await fetch('https://bogdanolar.pythonanywhere.com/delegat')
     const dataDelegat = await responsDelegat.json()
 
     return {

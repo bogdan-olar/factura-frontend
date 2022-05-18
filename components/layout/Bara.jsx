@@ -4,7 +4,7 @@ function Bara(props){
     console.log(props)
 
     function delog() {
-        fetch('http://bogdanolar.pythonanywhere.com/logout').then( res => res.json() ).then( res => props.handleLog(false) ).catch( err => console.log(err) )
+        fetch('https://bogdanolar.pythonanywhere.com/logout').then( res => res.json() ).then( res => props.handleLog(false) ).catch( err => console.log(err) )
     }
 
     return (

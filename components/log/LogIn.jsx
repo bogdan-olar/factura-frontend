@@ -13,7 +13,7 @@ function LogIn({handleLogIn, handleLog}) {
     }
 
     const submit = (values) => {
-        fetch('http://bogdanolar.pythonanywhere.com/login', {
+        fetch('https://bogdanolar.pythonanywhere.com/login', {
             method: 'POST',
             credentials: 'include',
             headers: { 'Content-type': 'application/json' },

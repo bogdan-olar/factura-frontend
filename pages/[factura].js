@@ -173,10 +173,10 @@ export async function getServerSideProps( context ) {
     const { params } = context
     const { factura } = params
 
-    const emi = await fetch('http://bogdanolar.pythonanywhere.com/emitent')
+    const emi = await fetch('https://bogdanolar.pythonanywhere.com/emitent')
     const emitent = await emi.json()
 
-    const res = await fetch(`http://bogdanolar.pythonanywhere.com/facturaSingura?nr=${factura}`)
+    const res = await fetch(`https://bogdanolar.pythonanywhere.com/facturaSingura?nr=${factura}`)
     const date = await res.json()
 
     return {

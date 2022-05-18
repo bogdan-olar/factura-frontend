@@ -15,7 +15,7 @@ function NewAccount({handleCreateAccount}) {
     }
 
     const submit = (values) => {
-        fetch('http://bogdanolar.pythonanywhere.com/user/contNou', {
+        fetch('https://bogdanolar.pythonanywhere.com/user/contNou', {
             method: 'POST',
             headers: { 'Content-type': 'application/json'},
             body: JSON.stringify(values)

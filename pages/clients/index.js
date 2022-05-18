@@ -12,7 +12,7 @@ function Clients(props) {
 
 
     function handleDelete(id) {
-         fetch('http://bogdanolar.pythonanywhere.com/client/delete', {
+         fetch('https://bogdanolar.pythonanywhere.com/client/delete', {
              method: 'DELETE',
              headers: { 'Content-type': 'application/json' },
              body: JSON.stringify({ i: id })
@@ -20,7 +20,7 @@ function Clients(props) {
     }
 
     useEffect( () => {
-            fetch('http://bogdanolar.pythonanywhere.com/clients').then( res => res.json() ).then( date => setClienti(date) ).catch( err => console.log(err) )
+            fetch('https://bogdanolar.pythonanywhere.com/clients').then( res => res.json() ).then( date => setClienti(date) ).catch( err => console.log(err) )
     }, [count])
 
 
@@ -77,7 +77,7 @@ function Clients(props) {
 export default Clients
 
 export async function getServerSideProps() {
-    const r = await fetch('http://bogdanolar.pythonanywhere.com/clients')
+    const r = await fetch('https://bogdanolar.pythonanywhere.com/clients')
     const data = await r.json()
 
     return {

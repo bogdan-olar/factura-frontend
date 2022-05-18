@@ -25,7 +25,7 @@ function Emitent(props) {
 
     function submit(values) {
         console.log( JSON.stringify(values) )
-        return fetch('http://bogdanolar.pythonanywhere.com/emitent/update', {
+        return fetch('https://bogdanolar.pythonanywhere.com/emitent/update', {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(values)
@@ -201,7 +201,7 @@ function Emitent(props) {
 export default Emitent
 
 export async function getServerSideProps() {
-    const res = await fetch('http://bogdanolar.pythonanywhere.com/emitent')
+    const res = await fetch('https://bogdanolar.pythonanywhere.com/emitent')
     const data = await res.json()
 
     return{
